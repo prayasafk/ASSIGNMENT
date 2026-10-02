@@ -1,0 +1,1467 @@
+/* =========================================================
+   CHENNAI LABOUR MARKET DATA STORY
+   AUTHOR: PRAYAS RAUT
+========================================================= */
+
+
+/* =========================================================
+   1. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --ink: #111827;
+
+    --text: #1f2937;
+
+    --muted: #667085;
+
+    --light-muted: #98a2b3;
+
+    --paper: #ffffff;
+
+    --background: #f4f6f8;
+
+    --soft: #eef4fb;
+
+    --soft-orange: #fff7f0;
+
+    --line: #d9dee7;
+
+    --grid: #e7eaf0;
+
+    --accent: #0b5cad;
+
+    --accent-dark: #084783;
+
+    --accent2: #e07a2d;
+
+    --accent2-dark: #b95c16;
+
+    --footer: #111827;
+
+    --max-width: 1180px;
+
+    --content-width: 920px;
+
+}
+
+
+/* =========================================================
+   2. GLOBAL RESET
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--background);
+
+    color: var(--ink);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.65;
+
+    -webkit-font-smoothing: antialiased;
+
+    text-rendering: optimizeLegibility;
+
+}
+
+
+/* =========================================================
+   3. MEDIA
+========================================================= */
+
+img,
+svg {
+
+    max-width: 100%;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+/* =========================================================
+   4. MAIN WEBSITE
+========================================================= */
+
+.site {
+
+    width: 100%;
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    min-height: 100vh;
+
+    background: var(--paper);
+
+}
+
+
+/* =========================================================
+   5. HEADER
+========================================================= */
+
+header {
+
+    padding: 54px 7% 36px;
+
+    border-bottom: 1px solid var(--line);
+
+    background: var(--paper);
+
+}
+
+
+/* =========================================================
+   6. KICKER
+========================================================= */
+
+.kicker {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+
+    margin-bottom: 14px;
+
+}
+
+
+/* =========================================================
+   7. MAIN HEADLINE
+========================================================= */
+
+h1 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+
+    max-width: 920px;
+
+    margin: 0 0 18px;
+
+    color: var(--ink);
+
+}
+
+
+/* =========================================================
+   8. INTRODUCTION / DECK
+========================================================= */
+
+.dek {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+
+    line-height: 1.45;
+
+    color: #475467;
+
+    max-width: 800px;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   9. BYLINE
+========================================================= */
+
+.byline {
+
+    margin-top: 22px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* AUTHOR NAME */
+
+.byline strong {
+
+    color: var(--ink);
+
+    font-weight: 700;
+
+}
+
+
+/* DOTS BETWEEN BYLINE ELEMENTS */
+
+.separator {
+
+    margin: 0 6px;
+
+    color: var(--light-muted);
+
+}
+
+
+/* =========================================================
+   10. MAIN CONTENT
+========================================================= */
+
+main {
+
+    width: 100%;
+
+    max-width: var(--content-width);
+
+    margin: 0 auto;
+
+    padding: 34px 7% 70px;
+
+}
+
+
+/* =========================================================
+   11. STORY TYPOGRAPHY
+========================================================= */
+
+.story p {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    color: var(--text);
+
+    margin: 0 0 22px;
+
+}
+
+
+/* =========================================================
+   12. DROP CAP
+========================================================= */
+
+.dropcap:first-letter {
+
+    font-size: 4.2em;
+
+    float: left;
+
+    line-height: 0.8;
+
+    padding: 8px 9px 0 0;
+
+    font-weight: 700;
+
+    color: var(--ink);
+
+}
+
+
+/* =========================================================
+   13. SECTION LABEL
+========================================================= */
+
+.section-label {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+    margin: 44px 0 10px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   14. STATISTICS GRID
+========================================================= */
+
+.stat-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin: 28px 0 42px;
+
+}
+
+
+/* =========================================================
+   15. STAT CARD
+========================================================= */
+
+.stat {
+
+    background: var(--soft);
+
+    border-top: 4px solid var(--accent);
+
+    padding: 17px 15px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+/* Hover effect */
+
+.stat:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(16, 24, 40, 0.08);
+
+}
+
+
+/* =========================================================
+   16. STAT NUMBER
+========================================================= */
+
+.stat strong {
+
+    display: block;
+
+    font-size: 30px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: var(--ink);
+
+}
+
+
+/* =========================================================
+   17. STAT DESCRIPTION
+========================================================= */
+
+.stat span {
+
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    margin-top: 6px;
+
+}
+
+
+/* =========================================================
+   18. CHART CARD
+========================================================= */
+
+.chart-card {
+
+    width: 100%;
+
+    border:
+        1px solid var(--line);
+
+    margin: 34px 0;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* =========================================================
+   19. CHART CARD HOVER
+========================================================= */
+
+.chart-card:hover {
+
+    box-shadow:
+        0 10px 30px
+        rgba(16, 24, 40, 0.07);
+
+}
+
+
+/* =========================================================
+   20. CHART HEADER
+========================================================= */
+
+.chart-head {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid var(--line);
+
+    padding-bottom: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   21. CHART TITLE
+========================================================= */
+
+.chart-title {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    color: var(--ink);
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   22. CHART NOTE
+========================================================= */
+
+.chart-note {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    color: var(--muted);
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   23. SVG CHART
+========================================================= */
+
+.chart {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   24. CHART AXIS
+========================================================= */
+
+.axis {
+
+    stroke: #667085;
+
+    stroke-width: 1.2;
+
+}
+
+
+/* =========================================================
+   25. CHART GRID
+========================================================= */
+
+.grid {
+
+    stroke: var(--grid);
+
+    stroke-width: 1;
+
+}
+
+
+/* =========================================================
+   26. CHART LABELS
+========================================================= */
+
+.label {
+
+    fill: #344054;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   27. CHART VALUES
+========================================================= */
+
+.value {
+
+    fill: var(--ink);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   28. CHART WHITE LABELS
+========================================================= */
+
+.chart-white {
+
+    fill: #ffffff;
+
+}
+
+
+/* =========================================================
+   29. PRIMARY BAR
+========================================================= */
+
+.bar1 {
+
+    fill: var(--accent);
+
+}
+
+
+/* =========================================================
+   30. SECONDARY BAR
+========================================================= */
+
+.bar2 {
+
+    fill: var(--accent2);
+
+}
+
+
+/* =========================================================
+   31. UNEMPLOYMENT LINE
+========================================================= */
+
+.line {
+
+    fill: none;
+
+    stroke: var(--accent);
+
+    stroke-width: 3;
+
+}
+
+
+/* =========================================================
+   32. INFLATION LINE
+========================================================= */
+
+.inflation-line {
+
+    fill: none;
+
+    stroke: var(--accent2);
+
+    stroke-width: 3;
+
+}
+
+
+/* =========================================================
+   33. UNEMPLOYMENT DOT
+========================================================= */
+
+.dot {
+
+    fill: var(--accent2);
+
+    stroke: #ffffff;
+
+    stroke-width: 2;
+
+}
+
+
+/* =========================================================
+   34. INFLATION DOT
+========================================================= */
+
+.inflation-dot {
+
+    fill: var(--accent2);
+
+    stroke: #ffffff;
+
+    stroke-width: 2;
+
+}
+
+
+/* =========================================================
+   35. CHART CAPTION
+========================================================= */
+
+.caption {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+    color: var(--muted);
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   36. CALLOUT BOX
+========================================================= */
+
+.callout {
+
+    border-left:
+        5px solid var(--accent2);
+
+    background:
+        var(--soft-orange);
+
+    padding: 20px 22px;
+
+    margin: 34px 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: var(--ink);
+
+}
+
+
+/* =========================================================
+   37. SOURCE SECTION
+========================================================= */
+
+.sources {
+
+    border-top:
+        1px solid var(--line);
+
+    padding-top: 22px;
+
+    margin-top: 48px;
+
+    color: var(--muted);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================================================
+   38. SOURCE HEADING
+========================================================= */
+
+.sources strong {
+
+    color: var(--ink);
+
+}
+
+
+/* =========================================================
+   39. SOURCE ITALICS
+========================================================= */
+
+.sources em {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+}
+
+
+/* =========================================================
+   40. FOOTER
+========================================================= */
+
+footer {
+
+    background:
+        var(--footer);
+
+    color: #d0d5dd;
+
+    padding: 28px 7%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   41. FOOTER AUTHOR NAME
+========================================================= */
+
+footer strong {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   42. LINKS
+========================================================= */
+
+a {
+
+    color: var(--accent);
+
+    text-decoration: none;
+
+}
+
+
+a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   43. TEXT SELECTION
+========================================================= */
+
+::selection {
+
+    background:
+        var(--accent);
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================================
+   44. TABLE
+========================================================= */
+
+.data-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 28px 0;
+
+    font-size: 13px;
+
+}
+
+
+.data-table th,
+.data-table td {
+
+    border-bottom:
+        1px solid var(--line);
+
+    padding: 10px;
+
+    text-align: right;
+
+}
+
+
+.data-table th:first-child,
+.data-table td:first-child {
+
+    text-align: left;
+
+}
+
+
+.data-table th {
+
+    background:
+        #f8fafc;
+
+    font-weight: 700;
+
+}
+
+
+.data-table tr:hover {
+
+    background:
+        #f8fafc;
+
+}
+
+
+/* =========================================================
+   45. HORIZONTAL RULE
+========================================================= */
+
+hr {
+
+    border: 0;
+
+    border-top:
+        1px solid var(--line);
+
+    margin: 32px 0;
+
+}
+
+
+/* =========================================================
+   46. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+
+        padding:
+            44px 6% 32px;
+
+    }
+
+
+    main {
+
+        padding-left: 6%;
+
+        padding-right: 6%;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            clamp(40px, 8vw, 64px);
+
+    }
+
+
+    .stat-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .chart-card {
+
+        padding: 18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   47. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 760px) {
+
+
+    body {
+
+        background:
+            #ffffff;
+
+    }
+
+
+    .site {
+
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+
+    /* HEADER */
+
+    header {
+
+        padding:
+            38px 6% 28px;
+
+    }
+
+
+    /* KICKER */
+
+    .kicker {
+
+        font-size:
+            11px;
+
+        letter-spacing:
+            0.12em;
+
+    }
+
+
+    /* HEADLINE */
+
+    h1 {
+
+        font-size:
+            clamp(38px, 12vw, 54px);
+
+        line-height:
+            1.04;
+
+        letter-spacing:
+            -0.035em;
+
+    }
+
+
+    /* DECK */
+
+    .dek {
+
+        font-size:
+            18px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    /* MAIN */
+
+    main {
+
+        padding:
+            25px 6% 55px;
+
+    }
+
+
+    /* STORY */
+
+    .story p {
+
+        font-size:
+            17px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    /* STATISTICS */
+
+    .stat-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            10px;
+
+        margin-top:
+            24px;
+
+        margin-bottom:
+            36px;
+
+    }
+
+
+    .stat {
+
+        padding:
+            15px 13px;
+
+    }
+
+
+    .stat strong {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .stat span {
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* CHART CARD */
+
+    .chart-card {
+
+        margin:
+            28px 0;
+
+        padding:
+            14px;
+
+    }
+
+
+    /* CHART HEADER */
+
+    .chart-head {
+
+        display:
+            block;
+
+        padding-bottom:
+            10px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    /* CHART TITLE */
+
+    .chart-title {
+
+        font-size:
+            16px;
+
+    }
+
+
+    /* CHART NOTE */
+
+    .chart-note {
+
+        text-align:
+            left;
+
+        margin-top:
+            7px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* SECTION LABEL */
+
+    .section-label {
+
+        margin-top:
+            36px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    /* CALLOUT */
+
+    .callout {
+
+        padding:
+            17px 18px;
+
+        margin:
+            28px 0;
+
+        font-size:
+            18px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    /* FOOTER */
+
+    footer {
+
+        padding:
+            24px 6%;
+
+    }
+
+}
+
+
+/* =========================================================
+   48. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    header {
+
+        padding:
+            30px 5% 24px;
+
+    }
+
+
+    main {
+
+        padding-left:
+            5%;
+
+        padding-right:
+            5%;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            38px;
+
+    }
+
+
+    .dek {
+
+        font-size:
+            17px;
+
+    }
+
+
+    .stat-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            8px;
+
+    }
+
+
+    .stat {
+
+        padding:
+            13px 10px;
+
+    }
+
+
+    .stat strong {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .stat span {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .chart-card {
+
+        padding:
+            10px;
+
+        margin:
+            24px 0;
+
+    }
+
+
+    .chart-title {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .story p {
+
+        font-size:
+            16.5px;
+
+    }
+
+
+    .callout {
+
+        font-size:
+            17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   49. PRINT VERSION
+========================================================= */
+
+@media print {
+
+
+    body {
+
+        background:
+            #ffffff;
+
+    }
+
+
+    .site {
+
+        max-width:
+            none;
+
+        box-shadow:
+            none;
+
+    }
+
+
+    header {
+
+        border-bottom:
+            1px solid #999;
+
+    }
+
+
+    .chart-card {
+
+        box-shadow:
+            none;
+
+        break-inside:
+            avoid;
+
+    }
+
+
+    .stat {
+
+        box-shadow:
+            none;
+
+    }
+
+
+    footer {
+
+        color:
+            #333;
+
+        background:
+            #ffffff;
+
+        border-top:
+            1px solid #999;
+
+    }
+
+}
+
+
+/* =========================================================
+   50. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+
+    outline:
+        3px solid var(--accent);
+
+    outline-offset:
+        3px;
+
+}
+
+
+/* =========================================================
+   51. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior:
+            auto;
+
+    }
+
+
+    * {
+
+        transition:
+            none !important;
+
+        animation:
+            none !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   END OF CSS
+========================================================= */
